@@ -1,0 +1,45 @@
+/* =========================================================================
+   members-data.js — 36 akun member Pancasandya (login NGL personal)
+   PENTING: file ini berisi password dalam bentuk polos (bukan di-hash),
+   karena login ini hanya proteksi ringan sisi tampilan, bukan sistem auth
+   sungguhan. Jangan pakai untuk data yang benar-benar rahasia.
+   ========================================================================= */
+
+const MEMBERS = [
+  { id: "afandi", username: "Afandi", password: "nj7qxrcj" },
+  { id: "afrizal-adi-pratama", username: "Afrizal Adi Pratama", password: "te4pxrbj" },
+  { id: "aisha-faridah-putri", username: "Aisha Faridah Putri", password: "c69fyhxx" },
+  { id: "anindya-ayu-kirana", username: "Anindya Ayu Kirana", password: "hgsmcmz2" },
+  { id: "argi-prayata-hascar", username: "Argi Prayata Hascar", password: "6um4eksd" },
+  { id: "arinta-sinar-kasih-rammadhani", username: "Arinta Sinar Kasih Rammadhani", password: "4vfd4r9q" },
+  { id: "asha-syifa", username: "Asha Syifa", password: "6uf4t6px" },
+  { id: "cesyia-anggellina-saputri", username: "Cesyia Anggellina Saputri", password: "gpbeq2cu" },
+  { id: "desta-rafli-herdiansyah", username: "Desta Rafli Herdiansyah", password: "fas633wh" },
+  { id: "dhea-fazri-astuti", username: "Dhea Fazri Astuti", password: "4ks2yxmk" },
+  { id: "evrilya-cindra-nur-mayang", username: "Evrilya Cindra Nur Mayang", password: "9fepxgc4" },
+  { id: "fatimah-nur-fitriani", username: "Fatimah Nur Fitriani", password: "2vtvpb64" },
+  { id: "febriana-nur-safira", username: "Febriana Nur Safira", password: "kdjjwm4m" },
+  { id: "gagarin-ingga-frencesra", username: "Gagarin Ingga Frencesra", password: "nbg7wum4" },
+  { id: "galuh-meida-sari", username: "Galuh Meida Sari", password: "g7xcb65t" },
+  { id: "gamat-imam-rivai", username: "Gamat Imam Rivai", password: "he7vy37z" },
+  { id: "glenda-riskiansah", username: "Glenda Riskiansah", password: "dufvegrc" },
+  { id: "kariza-izza-maulidia", username: "Kariza Izza Maulidia", password: "b68xxymw" },
+  { id: "kayla-shafa-fiorenza", username: "Kayla Shafa Fiorenza", password: "xp2ug4em" },
+  { id: "keisha-citra-kirana", username: "Keisha Citra Kirana", password: "az6xdqhp" },
+  { id: "khoirunisa-salsabila", username: "Khoirunisa Salsabila", password: "cxrf5w7c" },
+  { id: "lailatus-istiana-putri-winanti", username: "Lailatus Istiana Putri Winanti", password: "nwnnumvw" },
+  { id: "maulana-tsaqif-alhafidh", username: "Maulana Tsaqif Alhafidh", password: "7njzbhpd" },
+  { id: "maulida-azzahra", username: "Maulida Azzahra", password: "3a2j8gdu" },
+  { id: "muhammad-fahri-fakhrullah", username: "Muhammad Fahri Fakhrullah", password: "mvusme3p" },
+  { id: "nachila-zukhrifatul-latifa", username: "Nachila Zukhrifatul Latifa", password: "r4zxrjyp" },
+  { id: "nadia-frita-kusuma", username: "Nadia Frita Kusuma", password: "n4xhx8tr" },
+  { id: "nanda-messi-pratama", username: "Nanda Messi Pratama", password: "ayzzszs4" },
+  { id: "nasyita-hidayah", username: "Nasyita Hidayah", password: "cajarue2" },
+  { id: "revalina-amdhani", username: "Revalina Amdhani", password: "z962f4jf" },
+  { id: "safa-permata-linggarjati", username: "Safa Permata Linggarjati", password: "mwndq3qy" },
+  { id: "sakhi-putri-hapsari", username: "Sakhi Putri Hapsari", password: "bgat3dnc" },
+  { id: "shabria-difa-ramadhani", username: "Shabria Difa Ramadhani", password: "ttvugm8j" },
+  { id: "sherly-arista", username: "Sherly Arista", password: "8rf6tqn7" },
+  { id: "syaamil-dhiyaulhaq", username: "Syaamil Dhiyaulhaq", password: "zwaj9mr8" },
+  { id: "verliyana-zahrotusyita", username: "Verliyana Zahrotusyita", password: "9uts3r4s" },
+];
