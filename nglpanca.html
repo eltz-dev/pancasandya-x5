@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGL — Pancasandya X.5</title>
+<link rel="icon" type="image/jpeg" href="https://file.garden/amb24ZUqZzagxpoJ/motion_photo_8284850200272742895.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Buka menu" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <div class="brand"><span class="brand-dot"></span> Pancasandya</div>
+  </div>
+  <div class="horizon-bar"></div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar-gate" id="sidebarGate">
+    <img src="https://file.garden/amb24ZUqZzagxpoJ/67b3fdc64d6d9.png" alt="Lambang Pancasandya">
+    <span>Membuka Gerbang…</span>
+  </div>
+  <nav class="sidebar-nav" id="sidebarNav">
+    <a href="index.html">Dashboard</a>
+    <a href="pancasandya.html">What Is Pancasandya?</a>
+    <a href="nglpanca.html">NGL</a>
+    <a href="anggota.html">Anggota Kelas</a>
+    <a href="sosmed.html">Sosmed Kelas</a>
+  </nav>
+  <div class="sidebar-footer">X.5 · SMA NEGERI 1 SEMIN · Est. 2026</div>
+</aside>
+
+<main class="container form-page">
+  <span class="eyebrow reveal">Kirim Tanpa Nama</span>
+  <h1 class="reveal">NGL Pancasandya</h1>
+  <p class="reveal">Sampaikan pesan, sapaan, atau apapun ke teman sekelas X.5 secara anonim. Nama kamu bersifat opsional.</p>
+
+  <form class="form-card reveal" id="nglForm">
+    <div class="field">
+      <label for="nglNama">Nama Kamu <span class="optional">(Opsional)</span></label>
+      <input type="text" id="nglNama" name="nama" placeholder="Boleh dikosongkan…" autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="nglKepada">Kepada</label>
+      <select id="nglKepada" name="kepada" required>
+        <option value="" disabled selected>Pilih tujuan pesan…</option>
+        <option value="afandi">Afandi</option>
+        <option value="afrizal-adi-pratama">Afrizal Adi Pratama</option>
+        <option value="aisha-faridah-putri">Aisha Faridah Putri</option>
+        <option value="anindya-ayu-kirana">Anindya Ayu Kirana</option>
+        <option value="argi-prayata-hascar">Argi Prayata Hascar</option>
+        <option value="arinta-sinar-kasih-rammadhani">Arinta Sinar Kasih Rammadhani</option>
+        <option value="asha-syifa">Asha Syifa</option>
+        <option value="cesyia-anggellina-saputri">Cesyia Anggellina Saputri</option>
+        <option value="desta-rafli-herdiansyah">Desta Rafli Herdiansyah</option>
+        <option value="dhea-fazri-astuti">Dhea Fazri Astuti</option>
+        <option value="evrilya-cindra-nur-mayang">Evrilya Cindra Nur Mayang</option>
+        <option value="fatimah-nur-fitriani">Fatimah Nur Fitriani</option>
+        <option value="febriana-nur-safira">Febriana Nur Safira</option>
+        <option value="gagarin-ingga-frencesra">Gagarin Ingga Frencesra</option>
+        <option value="galuh-meida-sari">Galuh Meida Sari</option>
+        <option value="gamat-imam-rivai">Gamat Imam Rivai</option>
+        <option value="glenda-riskiansah">Glenda Riskiansah</option>
+        <option value="kariza-izza-maulidia">Kariza Izza Maulidia</option>
+        <option value="kayla-shafa-fiorenza">Kayla Shafa Fiorenza</option>
+        <option value="keisha-citra-kirana">Keisha Citra Kirana</option>
+        <option value="khoirunisa-salsabila">Khoirunisa Salsabila</option>
+        <option value="lailatus-istiana-putri-winanti">Lailatus Istiana Putri Winanti</option>
+        <option value="maulana-tsaqif-alhafidh">Maulana Tsaqif Alhafidh</option>
+        <option value="maulida-azzahra">Maulida Azzahra</option>
+        <option value="muhammad-fahri-fakhrullah">Muhammad Fahri Fakhrullah</option>
+        <option value="nachila-zukhrifatul-latifa">Nachila Zukhrifatul Latifa</option>
+        <option value="nadia-frita-kusuma">Nadia Frita Kusuma</option>
+        <option value="nanda-messi-pratama">Nanda Messi Pratama</option>
+        <option value="nasyita-hidayah">Nasyita Hidayah</option>
+        <option value="revalina-amdhani">Revalina Amdhani</option>
+        <option value="safa-permata-linggarjati">Safa Permata Linggarjati</option>
+        <option value="sakhi-putri-hapsari">Sakhi Putri Hapsari</option>
+        <option value="shabria-difa-ramadhani">Shabria Difa Ramadhani</option>
+        <option value="sherly-arista">Sherly Arista</option>
+        <option value="syaamil-dhiyaulhaq">Syaamil Dhiyaulhaq</option>
+        <option value="verliyana-zahrotusyita">Verliyana Zahrotusyita</option>
+        <option value="semua">Semuanya</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="nglPesan">Pesan</label>
+      <textarea id="nglPesan" name="pesan" placeholder="Tulis pesanmu di sini…" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block" id="nglSubmit">Kirim</button>
+    <div class="ngl-banner" id="nglStatusBanner"></div>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="horizon-bar"></div>
+  Pancasandya · Kelas X.5 · SMA Negeri 1 Semin
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ngl-settings.js"></script>
+<script src="js/ngl.js"></script>
+</body>
+</html>

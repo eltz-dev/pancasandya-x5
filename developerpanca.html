@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer Panel — Pancasandya X.5</title>
+<link rel="icon" type="image/jpeg" href="https://file.garden/amb24ZUqZzagxpoJ/motion_photo_8284850200272742895.jpg">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Buka menu" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <div class="brand"><span class="brand-dot"></span> Pancasandya · Developer</div>
+  </div>
+  <div class="horizon-bar"></div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar-gate" id="sidebarGate">
+    <img src="https://file.garden/amb24ZUqZzagxpoJ/67b3fdc64d6d9.png" alt="Lambang Pancasandya">
+    <span>Membuka Gerbang…</span>
+  </div>
+  <nav class="sidebar-nav" id="sidebarNav">
+    <a href="index.html">Dashboard</a>
+    <a href="pancasandya.html">What Is Pancasandya?</a>
+    <a href="nglpanca.html">NGL</a>
+    <a href="anggota.html">Anggota Kelas</a>
+    <a href="sosmed.html">Sosmed Kelas</a>
+  </nav>
+  <div class="sidebar-footer">X.5 · SMA NEGERI 1 SEMIN · Est. 2026</div>
+</aside>
+
+<!-- ===== gerbang login developer ===== -->
+<section class="dev-login" id="devLoginScreen">
+  <div class="dev-login-icon">◆</div>
+  <span class="eyebrow">Akses Terbatas</span>
+  <h1>Developer Panel</h1>
+  <p>Halaman ini khusus untuk developer Pancasandya. Masukkan password untuk melanjutkan.</p>
+
+  <form class="dev-login-card" id="devLoginForm">
+    <div class="field">
+      <label for="devPassword">Password Developer</label>
+      <input type="password" id="devPassword" name="password" placeholder="Masukkan password…" autocomplete="off" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Masuk</button>
+  </form>
+</section>
+
+<!-- ===== panel developer (tersembunyi sampai berhasil login) ===== -->
+<main class="container admin-page" id="devPanel" style="display:none;">
+  <span class="eyebrow reveal">Panel Developer</span>
+  <h1 class="reveal" style="margin-bottom:24px;">Kontrol Penuh Pancasandya</h1>
+
+  <section class="ngl-control reveal">
+    <div class="ngl-control-head">
+      <div>
+        <span class="eyebrow">Kontrol Developer</span>
+        <h2 style="margin:4px 0 0;">Matikan Fitur NGL Selama</h2>
+      </div>
+      <span class="status-pill" id="devNglStatusText">Memuat…</span>
+    </div>
+    <p>Jadwalkan NGL nonaktif sementara, atau aktifkan kembali kapan saja. Mengaktifkan NGL di sini akan langsung membatalkan status nonaktif yang diatur admin, karena wewenang developer lebih tinggi.</p>
+
+    <div class="dev-duration-row">
+      <select id="devDuration">
+        <option value="30">30 Menit</option>
+        <option value="60" selected>1 Jam</option>
+        <option value="360">6 Jam</option>
+        <option value="720">12 Jam</option>
+        <option value="1440">1 Hari</option>
+        <option value="4320">3 Hari</option>
+        <option value="10080">7 Hari</option>
+      </select>
+      <button class="btn btn-danger" id="devDisableBtn" type="button">Matikan Sekarang</button>
+    </div>
+    <button class="btn btn-primary btn-block" id="devActivateBtn" type="button" style="margin-top:12px;">Aktifkan NGL Sekarang</button>
+  </section>
+
+  <div class="admin-header">
+    <div>
+      <span class="eyebrow">Inbox</span>
+      <h2 style="margin-bottom:4px;">Pesan NGL Masuk</h2>
+      <span class="admin-count" id="devInboxCount">Memuat…</span>
+    </div>
+    <button class="btn btn-danger" id="devDeleteAllBtn">Delete All</button>
+  </div>
+
+  <div class="inbox-list" id="devInboxList">
+    <div class="inbox-empty">Memuat pesan…</div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="horizon-bar"></div>
+  Pancasandya · Kelas X.5 · SMA Negeri 1 Semin
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ngl-settings.js"></script>
+<script src="js/inbox.js"></script>
+<script src="js/developer-auth.js"></script>
+<script src="js/developer.js"></script>
+</body>
+</html>

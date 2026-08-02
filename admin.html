@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Inbox — Pancasandya X.5</title>
+<link rel="icon" type="image/jpeg" href="https://file.garden/amb24ZUqZzagxpoJ/motion_photo_8284850200272742895.jpg">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Buka menu" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <div class="brand"><span class="brand-dot"></span> Pancasandya · Admin</div>
+  </div>
+  <div class="horizon-bar"></div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar-gate" id="sidebarGate">
+    <img src="https://file.garden/amb24ZUqZzagxpoJ/67b3fdc64d6d9.png" alt="Lambang Pancasandya">
+    <span>Membuka Gerbang…</span>
+  </div>
+  <nav class="sidebar-nav" id="sidebarNav">
+    <a href="index.html">Dashboard</a>
+    <a href="pancasandya.html">What Is Pancasandya?</a>
+    <a href="nglpanca.html">NGL</a>
+    <a href="anggota.html">Anggota Kelas</a>
+    <a href="sosmed.html">Sosmed Kelas</a>
+  </nav>
+  <div class="sidebar-footer">X.5 · SMA NEGERI 1 SEMIN · Est. 2026</div>
+</aside>
+
+<main class="container admin-page">
+  <section class="ngl-control reveal">
+    <div class="ngl-control-head">
+      <div>
+        <span class="eyebrow">Kontrol NGL</span>
+        <h2 style="margin:4px 0 0;">Status Fitur NGL</h2>
+      </div>
+      <span class="status-pill" id="nglStatusText">Memuat…</span>
+    </div>
+    <p>Kamu bisa menonaktifkan NGL kapan saja. Jika developer mengaktifkan kembali, status ini otomatis mengikuti secara realtime.</p>
+    <button class="btn btn-ghost" id="nglToggleBtn" type="button">Memuat…</button>
+  </section>
+
+  <div class="admin-header">
+    <div>
+      <span class="eyebrow">Inbox</span>
+      <h1 style="margin-bottom:4px;">Pesan NGL Masuk</h1>
+      <span class="admin-count" id="inboxCount">Memuat…</span>
+    </div>
+    <button class="btn btn-danger" id="deleteAllBtn">Delete All</button>
+  </div>
+
+  <div class="inbox-list" id="inboxList">
+    <div class="inbox-empty">Memuat pesan…</div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="horizon-bar"></div>
+  Pancasandya · Kelas X.5 · SMA Negeri 1 Semin
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ngl-settings.js"></script>
+<script src="js/inbox.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

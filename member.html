@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Member — Pancasandya X.5</title>
+<link rel="icon" type="image/jpeg" href="https://file.garden/amb24ZUqZzagxpoJ/motion_photo_8284850200272742895.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="navbar-inner">
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Buka menu" aria-expanded="false">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <div class="brand"><span class="brand-dot"></span> Pancasandya</div>
+  </div>
+  <div class="horizon-bar"></div>
+</header>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside class="sidebar" id="sidebar" aria-hidden="true">
+  <div class="sidebar-gate" id="sidebarGate">
+    <img src="https://file.garden/amb24ZUqZzagxpoJ/67b3fdc64d6d9.png" alt="Lambang Pancasandya">
+    <span>Membuka Gerbang…</span>
+  </div>
+  <nav class="sidebar-nav" id="sidebarNav">
+    <a href="index.html">Dashboard</a>
+    <a href="pancasandya.html">What Is Pancasandya?</a>
+    <a href="nglpanca.html">NGL</a>
+    <a href="anggota.html">Anggota Kelas</a>
+    <a href="sosmed.html">Sosmed Kelas</a>
+  </nav>
+  <div class="sidebar-footer">X.5 · SMA NEGERI 1 SEMIN · Est. 2026</div>
+</aside>
+
+<!-- ===== gerbang login member ===== -->
+<section class="member-login" id="memberLoginScreen">
+  <div class="member-login-icon">✦</div>
+  <span class="eyebrow">Khusus Anggota X.5</span>
+  <h1>Login Member</h1>
+  <p>Masuk pakai akun kamu untuk melihat pesan NGL yang ditujukan khusus buat kamu.</p>
+
+  <form class="member-login-card" id="memberLoginForm">
+    <div class="field">
+      <label for="memberUsername">Username</label>
+      <input type="text" id="memberUsername" name="username" placeholder="Nama lengkap kamu…" autocomplete="off" required>
+    </div>
+
+    <div class="field">
+      <label for="memberPassword">Password</label>
+      <div class="password-field">
+        <input type="password" id="memberPassword" name="password" placeholder="Password kamu…" autocomplete="off" required>
+        <button type="button" class="password-toggle" id="memberTogglePassword" aria-label="Tampilkan/Sembunyikan password">
+          <svg class="eye-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7Z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <svg class="eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 3l18 18"/>
+            <path d="M10.6 5.2A9.9 9.9 0 0 1 12 5c6.4 0 10 7 10 7a17.7 17.7 0 0 1-3.6 4.4M6.6 6.6C4 8.3 2 12 2 12s3.6 7 10 7c1.4 0 2.7-.3 3.9-.8"/>
+            <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Captcha</label>
+      <div class="captcha-box">
+        <div class="captcha-letters" id="memberCaptchaLetters"></div>
+        <button type="button" class="captcha-refresh" id="memberCaptchaRefresh" aria-label="Refresh captcha">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12a9 9 0 1 1-3-6.7"/>
+            <path d="M21 4v5h-5"/>
+          </svg>
+        </button>
+      </div>
+      <div class="captcha-verify-row">
+        <input type="text" id="memberCaptchaInput" placeholder="Ketik ulang captcha di atas…" autocomplete="off">
+        <button type="button" class="btn btn-ghost" id="memberVerifyCaptchaBtn">Verifikasi</button>
+        <span class="captcha-result-icon" id="memberCaptchaResult"></span>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block" id="memberLoginBtn" disabled>Masuk</button>
+  </form>
+</section>
+
+<!-- ===== panel member (tersembunyi sampai berhasil login) ===== -->
+<main class="container admin-page" id="memberPanel" style="display:none;">
+  <div class="member-panel-header reveal">
+    <div>
+      <span class="member-welcome">Login sebagai <strong id="memberPanelName"></strong></span>
+      <h1>Inbox NGL Kamu</h1>
+      <span class="admin-count" id="memberInboxCount">Memuat…</span>
+    </div>
+    <button class="btn btn-ghost" id="memberLogoutBtn" type="button">Keluar</button>
+  </div>
+
+  <div class="inbox-list" id="memberInboxList">
+    <div class="inbox-empty">Memuat pesan…</div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="horizon-bar"></div>
+  Pancasandya · Kelas X.5 · SMA Negeri 1 Semin
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/ngl-settings.js"></script>
+<script src="js/members-data.js"></script>
+<script src="js/member.js"></script>
+</body>
+</html>
